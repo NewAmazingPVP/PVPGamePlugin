@@ -2,3 +2,4 @@ name: PVPGame
 version: '${project.version}'
 main: newamazingpvp.plugin.PVPGame
 api-version: '1.21'
+folia-supported: true
