@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: artifact
-          path: ./target/PVPGame-1.0.jar
+          path: ./target/plugin-1.0.jar
