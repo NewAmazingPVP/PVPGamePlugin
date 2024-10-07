@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class WordleGame {
 
@@ -16,9 +17,12 @@ public class WordleGame {
     public WordleGame(Player player) {
         this.player = player;
 
+        Random rand = new Random();
+
         for(int i=0; i<5; i++){
 
-            word=word+testREMOVETHIS.indexOf((int)(Math.random()*27));
+
+            word=word+rand.nextInt(testREMOVETHIS.size());
         }
 
         player.sendMessage(word);
