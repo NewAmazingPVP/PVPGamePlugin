@@ -1,12 +1,15 @@
 package newamazingpvp.plugin;
 
+import newamazingpvp.plugin.Mystics.MysticWell;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PVPGame extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+
+        getServer().getPluginManager().registerEvents(new MysticWell(), this);
+
 
     }
 
