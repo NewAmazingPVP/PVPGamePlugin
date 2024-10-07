@@ -48,7 +48,7 @@ public class MysticWell implements Listener{
 
         player.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_OPEN, 1.0f, 1.0f);
         Inventory customCraftingMenu = Bukkit.createInventory(player, 27, "§d§l[Mystic Well]");
-
+        player.openInventory(customCraftingMenu);
 
 
     }
