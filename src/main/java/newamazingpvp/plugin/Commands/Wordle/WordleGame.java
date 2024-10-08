@@ -21,7 +21,7 @@ public class WordleGame {
 
         for(int i=0; i<5; i++){
 
-            word=word+testREMOVETHIS.get(rand.nextInt(testREMOVETHIS.size()));
+            word+=testREMOVETHIS.get(rand.nextInt(testREMOVETHIS.size()));
         }
 
         player.sendMessage(" " + word);
