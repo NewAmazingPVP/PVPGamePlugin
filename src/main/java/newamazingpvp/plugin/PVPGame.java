@@ -1,6 +1,7 @@
 package newamazingpvp.plugin;
 
-import newamazingpvp.plugin.Commands.Wordle.WordleCMD;
+
+import newamazingpvp.plugin.Commands.AdminCMD.SetViewCMD;
 import newamazingpvp.plugin.Mystics.MysticWell;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,7 +12,7 @@ public final class PVPGame extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new MysticWell(), this);
 
-        getCommand("wordle").setExecutor(new WordleCMD());
+        getCommand("setview").setExecutor(new SetViewCMD());
 
 
     }
