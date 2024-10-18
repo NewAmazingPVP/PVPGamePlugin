@@ -42,7 +42,7 @@ public class MysticWell implements Listener {
         Player player = (Player) e.getPlayer();
         Inventory inv = e.getInventory();
 
-        if (e.getView().getTitle() == "§d§l[Mystic Well]") {
+        if (e.getView().getTitle().equals("§d§l[Mystic Well]")) {
             player.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
             mysticWellIDLE.cancel();
         }
