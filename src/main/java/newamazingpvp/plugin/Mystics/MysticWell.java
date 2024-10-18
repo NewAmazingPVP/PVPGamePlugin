@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
+import org.bukkit.boss.BossBar;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,9 +18,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.HashMap;
+import java.util.UUID;
+
 import static newamazingpvp.plugin.PVPGame.SERVER;
 
 public class MysticWell implements Listener {
+
 
 
     @EventHandler
@@ -44,15 +49,16 @@ public class MysticWell implements Listener {
 
         if (e.getView().getTitle().equals("§d§l[Mystic Well]")) {
             player.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
-            mysticWellIDLE.cancel();
+
         }
 
     }
 
-    public static BukkitRunnable mysticWellIDLE;
+    //public static BukkitRunnable mysticWellIDLE;
 
     public static void openCustomWellMenu(Player player) {
 
+        UUID uuid = player.getUniqueId();
         player.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_OPEN, 1.0f, 1.0f);
         Inventory mysticWell = Bukkit.createInventory(player, 45, "§d§l[Mystic Well]");
 
@@ -108,9 +114,9 @@ public class MysticWell implements Listener {
 
         player.openInventory(mysticWell);
 
-        mysticWellIDLE.cancel();
-        mysticWellIDLE = null;
-        mysticWellIDLE = new BukkitRunnable() {
+
+        /*mysticWellIDLE = new BukkitRunnable() {
+
 
 
             @Override
@@ -122,7 +128,8 @@ public class MysticWell implements Listener {
 
             }
         };
-        mysticWellIDLE.runTaskTimer(PVPGame.PVPGame, 0L, 10L); // Start immediately and repeat every second
+        mysticWellIDLE.runTaskTimer(PVPGame.PVPGame, 0L, 10L); // Start immediately and repeat every second*/
+
 
 
 
