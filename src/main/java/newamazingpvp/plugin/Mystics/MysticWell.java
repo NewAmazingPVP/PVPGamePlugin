@@ -44,6 +44,7 @@ public class MysticWell implements Listener {
 
         if (e.getView().getTitle() == "§d§l[Mystic Well]") {
             player.playSound(player.getLocation(), Sound.BLOCK_ENDER_CHEST_CLOSE, 1.0f, 1.0f);
+            mysticWellIDLE.cancel();
         }
 
     }
@@ -110,24 +111,17 @@ public class MysticWell implements Listener {
 
         mysticWellIDLE = new BukkitRunnable() {
 
-            int x = 0;
 
             @Override
             public void run() {
-                x++;
 
-                Bukkit.broadcastMessage("test");
-
-                if(x>10){
-                    this.cancel();
-                    return;
-                }
+                Bukkit.broadcastMessage("test1");
 
 
 
             }
         };
-        mysticWellIDLE.runTaskTimer(PVPGame.PVPGame, 0L, 20L); // Start immediately and repeat every second
+        mysticWellIDLE.runTaskTimer(PVPGame.PVPGame, 0L, 10L); // Start immediately and repeat every second
 
 
 
