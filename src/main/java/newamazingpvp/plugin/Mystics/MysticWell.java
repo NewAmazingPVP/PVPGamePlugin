@@ -108,7 +108,8 @@ public class MysticWell implements Listener {
 
         player.openInventory(mysticWell);
 
-
+        mysticWellIDLE.cancel();
+        mysticWellIDLE = null;
         mysticWellIDLE = new BukkitRunnable() {
 
 
