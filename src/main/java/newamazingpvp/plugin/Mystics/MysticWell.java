@@ -110,14 +110,24 @@ public class MysticWell implements Listener {
 
         mysticWellIDLE = new BukkitRunnable() {
 
+            int x = 0;
+
             @Override
             public void run() {
+                x++;
+
+                Bukkit.broadcastMessage("test");
+
+                if(x>10){
+                    this.cancel();
+                    return;
+                }
 
 
 
             }
         };
-        mysticWellIDLE.runTaskTimer(PVPGame, 0L, 20L); // Start immediately and repeat every second
+        mysticWellIDLE.runTaskTimer(PVPGame.PVPGame, 0L, 20L); // Start immediately and repeat every second
 
 
 
