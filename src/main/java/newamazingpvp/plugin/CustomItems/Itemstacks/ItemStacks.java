@@ -3,6 +3,7 @@ package newamazingpvp.plugin.CustomItems.Itemstacks;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -15,9 +16,11 @@ public class ItemStacks {
     public static ItemStack mysticSword() {
         ItemStack corruptedMobSoul = new ItemStack(Material.GOLDEN_SWORD);
         ItemMeta meta = corruptedMobSoul.getItemMeta();
+        meta.setDisplayName("§5Mystic Sword §7[No Enchants]");
+        meta.setUnbreakable(true);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         List<String> lore = new ArrayList<>();
-        lore.add(ChatColor.DARK_PURPLE + "U$e To Cr" + ChatColor.MAGIC + "a" + ChatColor.DARK_PURPLE + "ft Extra Hearts!" + ChatColor.MAGIC + "L");
-        lore.add(ChatColor.LIGHT_PURPLE + "Very rare drop from mobs!");
+        lore.add(ChatColor.LIGHT_PURPLE + "Used in the mystic well!");
         meta.setLore(lore);
         corruptedMobSoul.setItemMeta(meta);
         return corruptedMobSoul;
