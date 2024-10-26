@@ -16,8 +16,9 @@ public class ItemStacks {
     public static ItemStack mysticSword() {
         ItemStack corruptedMobSoul = new ItemStack(Material.GOLDEN_SWORD);
         ItemMeta meta = corruptedMobSoul.getItemMeta();
-        meta.setDisplayName("§5Mystic Sword §7[No Enchants]");
+        meta.setDisplayName("§5§lMystic Sword §7[No Enchants]");
         meta.setUnbreakable(true);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         List<String> lore = new ArrayList<>();
         lore.add(ChatColor.LIGHT_PURPLE + "Used in the mystic well!");
