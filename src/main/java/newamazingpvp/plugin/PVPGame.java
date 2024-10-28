@@ -4,6 +4,7 @@ package newamazingpvp.plugin;
 import newamazingpvp.plugin.Commands.AdminCMD.GiveCustomItem;
 import newamazingpvp.plugin.Commands.AdminCMD.SetViewCMD;
 import newamazingpvp.plugin.Mystics.MysticWell;
+import newamazingpvp.plugin.QOL.ItemPickUpToast;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -21,6 +22,7 @@ public final class PVPGame extends JavaPlugin {
 
 
         getServer().getPluginManager().registerEvents(new MysticWell(), this);
+        getServer().getPluginManager().registerEvents(new ItemPickUpToast(), this);
 
         getCommand("setview").setExecutor(new SetViewCMD());
         getCommand("givecustomitem").setExecutor(new GiveCustomItem());
