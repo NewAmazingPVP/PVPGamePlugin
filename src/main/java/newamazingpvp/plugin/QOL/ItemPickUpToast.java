@@ -34,7 +34,7 @@ public class ItemPickUpToast implements Listener {
         ItemMeta meta = item.getItemMeta();
         String itemName = meta.getDisplayName();
 
-        player.sendTitle(" ", itemName + " §4§l+", 0, 20, 0);
+        player.sendTitle(" ", itemName + " §4§l-", 0, 20, 0);
 
 
     }
