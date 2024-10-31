@@ -25,9 +25,6 @@ public class DisplayedItemNames implements Listener {
 
                 ItemMeta meta = ((Item) entity).getItemStack().getItemMeta();
 
-                entity.setCustomName(meta.getItemName());
-
-                entity.setCustomNameVisible(true);
 
             }
 
