@@ -24,11 +24,11 @@ public final class PVPGame extends JavaPlugin {
         SERVER = Bukkit.getServer();
 
 
-        getServer().getPluginManager().registerEvents(new MysticWell(), this);
-        getServer().getPluginManager().registerEvents(new ItemPickUpToast(), this);
+        //getServer().getPluginManager().registerEvents(new MysticWell(), this);
+        //getServer().getPluginManager().registerEvents(new ItemPickUpToast(), this);
 
-        getCommand("setview").setExecutor(new SetViewCMD());
-        getCommand("givecustomitem").setExecutor(new GiveCustomItem());
+        //getCommand("setview").setExecutor(new SetViewCMD());
+        //getCommand("givecustomitem").setExecutor(new GiveCustomItem());
 
 
     }
