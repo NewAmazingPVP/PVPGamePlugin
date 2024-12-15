@@ -8,7 +8,3 @@ commands:
   setview:
     description: toggle view
     usage: /setvuew <sim> <render>
-  givecustomitem:
-    description: gives a custom item
-    usage: /givecustomitem [item]
-    aliases: /gci
